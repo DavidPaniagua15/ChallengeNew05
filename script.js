@@ -4,7 +4,8 @@ var currentdate = document.querySelector('#currentDay')
 currentdate.textContent = date
 
 
-// compareed each slot with the actual time
+// compareed each slot with the actual time //
+
 $(".time-div").each(function () {
     var timeDiv = $(this).attr("id").split("-")[1];
     
@@ -18,4 +19,13 @@ $(".time-div").each(function () {
       $(this).removeClass("future");
       $(this).addClass("past");
     }
+  });
+
+  //saving in the local store //
+  
+  $(".saveBtn").click(function (event) {
+    event.preventDefault();
+    var value = $(this).siblings(".time-block").val();
+    var time = $(this).parent().attr("id").split("-")[1];
+    localStorage.setItem(time, value);
   });
