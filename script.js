@@ -42,3 +42,5 @@ let schedule3pm = $("#3 PM");
 let schedule4pm = $("#4 PM");
 let schedule5pm = $("#5 PM");
 
+let scheduleElArray = [schedule9am, schedule10am, schedule11am, schedule12pm, schedule1pm, schedule2pm, schedule3pm, schedule4pm, schedule5pm];
+
